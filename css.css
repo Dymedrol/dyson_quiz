@@ -1,0 +1,889 @@
+@font-face {
+  font-family: "Futura BT for Dyson";
+  src: url("https://media.rbcdn.ru/media/FuturaBTforDyson-Bk.otf") format("opentype"),
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+    margin:  0;
+    word-break: break-word;
+}
+
+body {
+    font-family: 'Futura BT for Dyson','Open Sans', Arial;
+}
+
+.dyson-wrapper {
+    position:  relative;
+    min-height: 100vh;
+    background: #D3D3D3;
+    padding-top:  35px;
+    padding-bottom: 159px;
+    overflow: hidden;
+}
+
+@media (min-width: 480px){
+    .dyson-wrapper {
+        padding-top:  35px;
+        padding-bottom: 159px;
+    }
+}
+
+@media (min-width: 640px){
+    .dyson-wrapper {
+        padding-top:  65px;
+        padding-bottom: 76px;
+    }
+}
+
+@media (min-width: 960px){
+    .dyson-wrapper {
+        padding-top:  65px;
+        padding-bottom: 76px;
+    }
+}
+@media (min-width: 1200px){
+    .dyson-wrapper {
+        padding-top:  65px;
+        padding-bottom: 76px;
+    }
+}
+
+.dyson-container {
+    position:  relative;
+    width:  100%;
+    padding:  0 10px;
+    margin: 0 auto;
+    z-index:  1;
+}
+
+@media (min-width: 480px){
+    .dyson-container {
+        width:  460px;
+        padding:  0;
+    }
+}
+
+@media (min-width: 640px){
+    .dyson-container {
+        width:  620px;
+    }
+}
+
+@media (min-width: 960px){
+    .dyson-container {
+        width:  940px;
+    }
+}
+
+@media (min-width: 1200px){
+    .dyson-container {
+        width:  1160px;
+    }
+}
+
+.dyson__header {
+    display:  flex;
+    justify-content: space-between;
+    margin-bottom:  28px;
+    z-index:  2;
+}
+
+@media (min-width: 640px){
+    .dyson__header {
+        margin-bottom:  45px;
+    }
+}
+
+.dyson {
+    position:  relative;
+    padding: 31px 15px 72px;
+    margin:  0 auto;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D6;
+    box-shadow: 0px 36px 80px rgba(0, 0, 0, 0.08), 0px 13.1406px 29.2013px rgba(0, 0, 0, 0.0551985), 0px 6.37951px 14.1767px rgba(0, 0, 0, 0.0445033), 0px 3.12736px 6.94968px rgba(0, 0, 0, 0.0354967), 0px 1.23656px 2.74791px rgba(0, 0, 0, 0.0248015);
+    background-repeat:  no-repeat;
+    background-position:  bottom center;
+    background-image:  url('https://media.rbcdn.ru/media/upload_tmp/2021/%D1%81%D0%BB%D0%BE%D0%B9_2_(1).png');
+}
+
+@media (min-width: 480px){
+    .dyson {
+        padding: 31px 15px 72px;
+    }
+}
+
+@media (min-width: 640px){
+    .dyson {
+        background-position:  top right;
+        background-image:  url('https://media.rbcdn.ru/media/upload_tmp/2021/vector_(5).png');
+        padding: 31px 19px 72px;
+    }
+}
+
+@media (min-width: 960px){
+    .dyson {
+        padding: 0 20px 65px;
+    }
+}
+
+@media (min-width: 1200px){
+    .dyson {
+        padding: 0 60px 65px;
+    }
+}
+
+.dyson-background {
+    display:  none;
+    position: absolute;
+    z-index:  -1;
+}
+
+@media (min-width: 640px){
+    .dyson-background {
+        display:  block;
+        top: -128px;
+        right: -42px;
+    }
+}
+
+@media (min-width: 960px){
+    .dyson-background {
+        top: -128px;
+        right: -42px;
+    }
+}
+
+@media (min-width: 1200px){
+    .dyson-background {
+        top: -128px;
+        right: -42px;
+    }
+}
+
+.dyson-background-mobile {
+    position:  absolute;
+    bottom: -160px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@media (min-width: 640px){
+    .dyson-background-mobile {
+        display:  none;
+    }
+}
+
+
+.dyson__steps {
+    display: none;
+}
+
+@media (min-width: 960px){
+    .dyson__steps {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 114px;
+        height:  15px;
+    }
+}
+
+.dyson__steps-step {
+    width: 59px;
+    height: 15px;
+    border: 1px solid #D9D9D6;
+    border-top:  none;
+    transition: all .2s;
+}
+
+.dyson__steps-step.active {
+    height: 45px;
+    background: #D9D9D6;
+}
+
+.dyson__steps-step.passed {
+    background: #D9D9D6;
+}
+
+.dyson__content {
+    display:  flex;
+    flex-direction: column;
+}
+
+@media (min-width: 960px){
+    .dyson__content {
+        display:  flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+
+.dyson__content-col1 {
+    display:  none;
+}
+
+@media (min-width: 960px){
+    .dyson__content-col1 {
+        display:  block;
+        width:  440px;
+    }
+}
+
+.dyson__main-img {
+    display:  block;
+    width: 440px;
+    height: 546px;
+    margin-bottom: 22px;
+    background-size: cover;
+    background-position: center;
+}
+
+.dyson__step-img {
+    display:  block;
+    width: 440px;
+    height: 546px;
+    margin-bottom: 43px;
+    background-size: cover;
+    background-position: center;
+}
+
+.dyson__step-img {
+    display:  block;
+    width: 440px;
+    height: 546px;
+    margin-bottom: 22px;
+}
+
+.dyson__main-imgsrc {
+    font-family: Futura BT for Dyson;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #808080;
+}
+
+.dyson__step-imgsrc {
+    font-family: Futura BT for Dyson;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #808080;
+}
+
+.dyson__step-imgsrc a {
+    color: #808080;
+}
+
+.dyson__main-imgsrc a {
+    color: #808080;
+}
+
+.dyson__step-back {
+    position:  relative;
+    font-size: 18px;
+    line-height: 23px;
+    color: rgba(0, 0, 0, 0.5);
+    padding-left:  35px;
+    cursor:  pointer;
+}
+
+.dyson__step-back:after {
+    position:  absolute;
+    width:  18px;
+    height:  18px;
+    content:  '';
+    background:  url('https://media.rbcdn.ru/media/upload_tmp/2021/next_1.png');
+    left: 0;
+    top: 2px;
+    cursor:  pointer;
+}
+
+.dyson__content-col2 {
+    width:  100%;
+}
+
+@media (min-width: 960px){
+    .dyson__content-col2 {
+        width:  435px;
+    }
+}
+
+@media (min-width: 1200px){
+    .dyson__content-col2 {
+        width:  540px;
+    }
+}
+
+.dyson__main-cube {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #000000;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 960px){
+    .dyson__main-cube {
+        margin-bottom: 70px;
+    }
+}
+
+.dyson__step-cube {
+    position:  relative;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #000000;
+    margin-bottom: 40px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+@media (min-width: 960px){
+    .dyson__step-cube {
+        margin-bottom: 70px;
+    }
+}
+
+.dyson__step-cube:after {
+    display:  block;
+    position:  relative;
+    content:  '';
+    width: 40px;
+    height: 40px;
+    background:  url('https://media.rbcdn.ru/media/upload_tmp/2021/line_1.png');
+    top: 15px;
+    left: 15px;
+}
+
+.dyson__step-cube1 {
+    position:  absolute;
+    top: 16px;
+    left: 21px;
+}
+
+.dyson__step-cube2 {
+    position:  absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+@media (min-width: 960px){
+    .dyson__main-cube {
+        margin-bottom: 70px;
+    }
+}
+
+.dyson__res-cube {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 70px;
+    border: 1px solid #000000;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 960px){
+    .dyson__res-cube {
+        margin-bottom: 70px;
+    }
+}
+
+.dyson__main-title {
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+    margin-bottom:  30px;
+}
+
+@media (min-width: 480px){
+    .dyson__main-title {
+        font-size: 30px;
+        line-height: 39px;
+        margin-bottom:  40px;
+    }
+}
+
+@media (min-width: 960px){
+    .dyson__main-title {
+        margin-bottom:  26px;
+    }
+}
+
+@media (min-width: 1200px){
+    .dyson__main-title {
+        font-size: 36px;
+        line-height: 47px;
+        margin-bottom:  40px;
+    }
+}
+
+.dyson__main-img2 {
+    margin-bottom:  10px;
+}
+
+@media (min-width: 960px){
+    .dyson__main-img2 {
+        display:  none;
+    }
+}
+
+.dyson__step-img2 {
+    margin-bottom:  10px;
+}
+
+@media (min-width: 960px){
+    .dyson__step-img2 {
+        display:  none;
+    }
+}
+
+.dyson__main-img2src {
+    margin-bottom:  30px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #808080;
+}
+
+@media (min-width: 480px){
+    .dyson__main-img2src {
+        font-size: 18px;
+        line-height: 23px;
+        margin-bottom:  40px;
+    }
+}
+
+@media (min-width: 960px){
+    .dyson__main-img2src {
+       display:  none;
+    }
+}
+
+.dyson__step-img2src {
+    margin-bottom:  30px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #808080;
+}
+
+@media (min-width: 480px){
+    .dyson__step-img2src {
+        font-size: 18px;
+        line-height: 23px;
+        margin-bottom:  40px;
+    }
+
+}
+
+@media (min-width: 960px){
+    .dyson__step-img2src {
+       display:  none;
+    }
+}
+
+.dyson__step-img2 img {
+    width:  100%;
+}
+
+.dyson__main-img2 img {
+    width:  100%;
+}
+
+.dyson__main-text {
+    font-size: 14px;
+    line-height: 18px;
+    color: #333333;
+    margin-bottom:  30px;
+}
+
+@media (min-width: 480px){
+    .dyson__main-text {
+        margin-bottom:  40px;
+    }
+}
+
+@media (min-width: 640px){
+    .dyson__main-text {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom:  40px;
+    }
+}
+
+@media (min-width: 960px){
+    .dyson__main-text {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom:  26px;
+    }
+}
+
+@media (min-width: 1200px){
+    .dyson__main-text {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom:  45px;
+    }
+}
+
+.dyson__step-form {
+
+}
+
+.dyson__step-answer {
+    position:  relative;
+    margin-bottom:  20px;
+}
+
+.dyson__step-answer-input{
+    position:  absolute;
+    opacity: 0;
+}
+
+.dyson__step-answer-input:checked + .dyson__step-label {
+    background: #0057B8;
+}
+
+.dyson__step-label {
+    position:  relative;
+    display:  block;
+    width:  100%;
+    min-height: 66px;
+    padding:  15px 20px 15px 65px;
+    background: #000000;
+    cursor:  pointer;
+}
+
+@media (min-width: 480px){
+    .dyson__step-label {
+        padding:  24px 20px 24px 84px;
+    }
+}
+
+.dyson__step-label-circle {
+    position:  absolute;
+    width:  31px;
+    height:  31px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 31px;
+    text-align: center;
+    text-transform: uppercase;
+    top: 20px;
+    left:  14px;
+}
+
+@media (min-width: 480px){
+    .dyson__step-label-circle {
+        top: 22px;
+        left:  22px;
+    }
+}
+
+.dyson__step-label-text {
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+@media (min-width: 480px){
+    .dyson__step-label-text {
+        font-size: 18px;
+        line-height: 23px;
+    }
+}
+
+.dyson__step-comment {
+    display:  none;
+    margin-top:  20px;
+    border: 1px solid #999999;
+    padding:  30px 25px 30px;
+}
+
+.dyson__step-comment-picsrc {
+    font-family: Futura BT for Dyson;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 23px;
+    color: #808080;
+    margin-bottom:  10px;
+}
+
+.dyson__step-comment-picsrc a {
+    color: #808080;
+}
+
+@media (min-width: 640px){
+    .dyson__step-comment-picsrc {
+        font-family: Futura BT for Dyson;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 23px;
+        color: #808080;
+        margin-bottom:  20px;
+    }
+}
+
+.dyson__step-comment-text {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom:  20px;
+}
+
+.dyson__step-comment-text a {
+    color: #000;
+}
+
+@media (min-width: 480px){
+    .dyson__step-comment-text {
+        font-size: 16px;
+        line-height: 21px;
+        margin-bottom:  30px;
+    }
+}
+
+.dyson__step-comment-img {
+    width:  100%;
+    height:  223px;
+    margin-bottom:  20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.dyson__step__start {
+    position: relative;
+    width: 228px;
+    padding-left: 38px;
+    height: 47px;
+    border:  none;
+    margin-top:  5px;
+
+    background: #000000;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+    color: #FFFFFF;
+    cursor: pointer;
+
+    margin-top:  0;
+    margin-bottom:  0;
+}
+
+@media (min-width: 480px){
+    .dyson__step__start {
+        width: 322px;
+        padding-left: 60px;
+        height: 59px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
+
+.dyson__step__start::after {
+    position:  absolute;
+    display:  block;
+    content:  '';
+    width:  10px;
+    height:  18px;
+    top: 15px;
+    left: 183px;
+    background:  url('https://media.rbcdn.ru/media/upload_tmp/2021/vector.png');
+}
+
+@media (min-width: 480px){
+    .dyson__step__start::after {
+        top: 21px;
+        left: 243px;
+    }
+}
+
+.dyson__step__start__last::after {
+    left: 205px;
+}
+
+@media (min-width: 480px){
+    .dyson__step__start__last::after {
+        left: 282px;
+    }
+}
+
+.dyson__res__start {
+    position: relative;
+    width: 223px;
+    padding-left: 30px;
+    height: 47px;
+    border:  none;
+    margin-top:  5px;
+
+    background: #000000;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+    color: #FFFFFF;
+    cursor: pointer;
+
+    margin-top:  0;
+    margin-bottom:  20px;
+}
+
+@media (min-width: 480px){
+    .dyson__res__start {
+        width: 305px;
+        padding-left: 60px;
+        height: 59px;
+        font-size: 18px;
+        line-height: 21px;
+        margin-top: 5px;
+    }
+}
+
+.dyson__res__start::after {
+    position:  absolute;
+    display:  block;
+    content:  '';
+    width:  10px;
+    height:  18px;
+    top: 15px;
+    left: 183px;
+    background:  url('https://media.rbcdn.ru/media/upload_tmp/2021/vector.png');
+}
+
+@media (min-width: 480px){
+    .dyson__res__start::after {
+        top: 20px;
+        left: 243px;
+    }
+}
+
+.dyson__main__buttons {
+    display:  flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1200px){
+    .dyson__main__buttons {
+        display:  flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+
+.dyson__main__start {
+    position: relative;
+    width: 255px;
+    padding-left: 60px;
+    height: 59px;
+    border:  none;
+    margin-top:  5px;
+
+    background: #000000;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: left;
+    color: #FFFFFF;
+    cursor: pointer;
+
+    margin-bottom:  30px;
+}
+
+@media (min-width: 480px){
+    .dyson__main__start {
+        margin-bottom:  40px;
+    }
+}
+
+@media (min-width: 960px){
+    .dyson__main__start {
+        margin-bottom:  26px;
+    }
+}
+
+@media (min-width: 1200px){
+    .dyson__main__start {
+        margin-bottom:  0;
+    }
+}
+
+.dyson__main__start::after {
+    position:  absolute;
+    display:  block;
+    content:  '';
+    width:  10px;
+    height:  18px;
+    top: 22px;
+    left: 180px;
+    background:  url('https://media.rbcdn.ru/media/upload_tmp/2021/vector.png');
+}
+
+.dyson__socials {
+
+}
+
+.dyson__socials-text {
+    font-size: 16px;
+    line-height: 21px;
+    color: #808080;
+    margin-top: 0;
+    margin-bottom: 13px;
+}
+
+.dyson__socials-wrapper {
+    display:  flex;
+    justify-content: space-between;
+    width:  200px;
+}
+
+.dyson__socials-item {
+    width:  30px;
+    height:  30px;
+    background: #000000;
+    cursor:  pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ok {
+    background-image:  url('https://media.rbcdn.ru/media/upload_tmp/2021/odnoklassniki.png');
+}
+
+.fb {
+    background-image:  url('https://media.rbcdn.ru/media/upload_tmp/2021/vector_(2).png');
+    background-position: 12px 4px;
+}
+
+.tw {
+    background-image:  url('https://media.rbcdn.ru/media/upload_tmp/2021/vector_(3).png');
+}
+
+.vk {
+    background-image:  url('https://media.rbcdn.ru/media/upload_tmp/2021/vector_(4).png');
+}
+
+.step, .result {
+    display:  none;
+}
+
